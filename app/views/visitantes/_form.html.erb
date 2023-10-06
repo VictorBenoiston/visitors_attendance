@@ -1,0 +1,57 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center">Novo Visitante</h2>
+
+          <%= form_with(model: visitante, class: "form-login") do |form| %>
+            <div class="mb-3">
+              <%= form.label :cpf, class: "form-label" %>
+              <%= form.text_field :cpf, class: "form-control", placeholder: "Ex: 111.222.333-44", required: true %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :nome, class: "form-label" %>
+              <%= form.text_field :nome, class: "form-control", placeholder: "Ex: Manel", required: true %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :rg, class: "form-label" %>
+              <%= form.text_field :rg, class: "form-control", placeholder: "Ex: 999.999.999", required: true %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :celular, class: "form-label" %>
+              <%= form.number_field :celular, class: "form-control", placeholder: "Ex: (00)92222-1111", required: true %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :foto, class: "form-label" %>
+              <%= form.text_field :foto, class: "form-control", placeholder: "URL da Foto" %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :hora_visita, class: "form-label" %>
+              <%= form.number_field :hora_visita, class: "form-control", placeholder: "Ex: 23:59", required: true %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :setor, class: "form-label" %>
+              <%= form.number_field :setor, class: "form-control", placeholder: "Ex: 1", required: true %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :funcionario_id, class: "form-label" %>
+              <%= form.number_field :funcionario_id, class: "form-control", placeholder: "Ex: 1234", required: true %>
+            </div>
+
+            <div class="text-center">
+              <%= form.submit "Salvar", class: "btn btn-primary" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

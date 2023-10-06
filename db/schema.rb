@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_05_201201) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_05_225405) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,6 +25,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_05_201201) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "visitantes", force: :cascade do |t|
+    t.string "cpf"
+    t.string "nome"
+    t.string "rg"
+    t.string "celular"
+    t.string "foto", default: "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
+    t.string "hora_visita"
+    t.integer "setor"
+    t.integer "funcionario_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

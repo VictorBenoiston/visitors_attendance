@@ -1,13 +1,36 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body text-center">
+          <img src="<%= 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg' %>" alt="Foto da logo" class="mb-3">
+          <h1 class="card-title">Bem vindo à Empresa ML4fun!</h1>
+          
+          <% if current_user %>
+            <p class="card-text">Olá, <%= current_user.email %>!</p>
+            <p class="card-text">Você é um: <%= current_user.role_humanize %></p>
+            <a href="<%= destroy_user_session_path %>" class="btn btn-danger" data-turbo-method="delete">Sair</a>
+            
+            <% if current_user.administrador? %>
+              <p class="mt-4">Permissões como Administrador:</p>
+              <div class="mb-3 d-flex flex-column align-items-center">
+                <a href="<%= new_visitante_path %>" class="btn btn-primary mb-3" style="transition: transform 0.2s ease-in-out">Cadastrar Visitante</a>
+                <a href="<%= new_user_registration_path %>" class="btn btn-primary">Registrar novo Funcionário</a>
+              </div>
+            <% end %>
+          <% else %>
+            <div class="d-flex flex-column align-items-center">
+              <p class="card-text mt-4" style="color: red;">Você não está logado.</p>
+              <a href="<%= new_user_session_path %>" class="btn btn-primary" style="margin-bottom: 15px; transition: transform 0.2s ease-in-out;">Entrar</a>
 
-<% if current_user %>
-    <p>Hello, <%= current_user.email%>!</p>
-    <p>You are a [<%= current_user.role%>]
-    <%= link_to 'Sign Out', destroy_user_session_path, 'data-turbo-method': :delete %>
-
-<% else %>
-    <p>You are not signed in.</p>
-    <%= link_to "Sign Up!", new_user_registration_path %>
-    <%= link_to "Sign In", new_user_session_path %>
-<% end %>
+            </div>
+          <% end %>
+        <div class="d-flex flex-column align-items-center">
+          <a href="<%= '/visitantes' %>" class="btn btn-success" style="transition: transform 0.2s ease-in-out">Visitantes cadastrados</a>
+        </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

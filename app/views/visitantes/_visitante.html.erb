@@ -1,0 +1,51 @@
+<div id="<%= dom_id visitante %>" class="container mt-5">
+  <style>
+    .card {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+
+    .card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-title {
+      color: black;
+    }
+
+    .card-text {
+      color: black;
+    }
+  </style>
+  
+  <div class="card">
+    <div class="card-body text-center">
+      <div class="hover-content">
+        <img src="<%= visitante.foto %>" alt="Foto do Visitante" class="mb-3">
+        <h4 class="card-title"><strong><%= visitante.nome %></strong></h4>
+      </div>
+      <div class="details-content">
+        <p class="card-text">
+          <strong>Cpf:</strong> <%= visitante.cpf %><br>
+          <strong>Rg:</strong> <%= visitante.rg %><br>
+          <strong>Celular:</strong> <%= visitante.celular %><br>
+          <strong>Hora visita:</strong> <%= visitante.hora_visita %><br>
+          <strong>Setor:</strong> <%= visitante.setor %><br>
+          <strong>Funcionário:</strong> <%= visitante.funcionario_id %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
