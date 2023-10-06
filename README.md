@@ -41,7 +41,7 @@ end
 
 ### Settando o banco de dados
 Nesta etapa, assume-se que já tenha o postgresql instalado. 
-Caso não, aqui está um tutorial para ![configuração de PostgreSQL em MacOS.](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-macos)
+Caso não, aqui está um tutorial para [configuração de PostgreSQL em MacOS.](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-macos)
 
 Criando um novo role
 ```shell
@@ -94,7 +94,7 @@ Realize a criação do banco e execute as migrações
 rails db:create
 rails db:migrate
 ```
-Dica de leitura para ![configuração de PostgreSQL em MacOS.](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-macos)
+Dica de leitura para [configuração de PostgreSQL em MacOS.](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-macos)
 
 ### Execute a aplicação
 ```shell
