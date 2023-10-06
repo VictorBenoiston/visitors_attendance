@@ -77,12 +77,15 @@ gh repo clone VictorBenoiston/visitors_attendance
 ```
 
 ### Adicione as gems do devise e cancancan ao Gemfile (Case não estejam presentes)
+
 ```shell
 gem 'devise'
 gem 'cancancan'
 ```
 
 ### Instale as gems com o bundle
+
+```shell
 cd <nome_do_repo> 
 bundle install
 ```
@@ -90,6 +93,7 @@ bundle install
 ### Configure o Banco de Dados
 Configure se banco de dados baseado no arquivo *database.yml* (Por default, estamos usando PostgreSQL).
 Realize a criação do banco e execute as migrações
+
 ```shell
 rails db:create
 rails db:migrate
@@ -97,6 +101,7 @@ rails db:migrate
 Dica de leitura para [configuração de PostgreSQL em MacOS.](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-macos)
 
 ### Execute a aplicação
+
 ```shell
 rails s
 ```
