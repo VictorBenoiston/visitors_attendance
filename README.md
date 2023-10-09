@@ -1,5 +1,9 @@
 # Dashboard de Visitantes
 
+## Login e senha para testes (Role: Administrador)
+Login: ed@example.com
+</br> Senha: password
+
 ## Requisitos Necessários:
 
 * Ruby 3.0.0 ou Superior
